@@ -73,14 +73,14 @@
     docker build -> criar uma imagem por um dockerfile
 
 # Tags
-    -i => modo interativo, mantém o processo rodando
-    -t => tty, permite enviarmos os comandos do nosso terminal
-    --rm => todo container que for criado, sera removido apos o processo terminar
-    -d => roda o container em background
-    -p OR -publish => bind a porta do host com o container
-    -P OR -publish-all => bind todas as portas que estão com expose no container, com portas aleatórias no host
-    -expose => expõe uma porta do container, isso permite a comunicação dos containers na rede dockerhost
-    --name => atribui um nome a um container
+    -i -> modo interativo, mantém o processo rodando
+    -t -> tty, permite enviarmos os comandos do nosso terminal
+    --rm -> todo container que for criado, sera removido apos o processo terminar
+    -d -> roda o container em background
+    -p OR -publish -> bind a porta do host com o container
+    -P OR -publish-all -> bind todas as portas que estão com expose no container, com portas aleatórias no host
+    -expose -> expõe uma porta do container, isso permite a comunicação dos containers na rede dockerhost
+    --name -> atribui um nome a um container
     -v OR -volume -> compartilha uma pasta do host para um container, ele cria a pasta caso n exista no host
     --mount type=bind -> ele bind um source->target do container, diferentemente do -v, ele da erro caso a pasta n exista no host
     --mount type=volume -> ele bind um volume->target do container, ou seja, pegamos um volume criado no, docker volume ls, e compartilhamos para a imagem

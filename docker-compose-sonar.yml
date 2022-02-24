@@ -1,0 +1,25 @@
+version: "3"
+services:
+  sonar-server:
+    image: sonarqube:latest
+    container_name: sonar-server
+    environment:
+      SONAR_JDBC_USERNAME: admin
+      SONAR_JDBC_PASSWORD: 123456
+    expose:
+      - 9000
+    network_mode: host
+    ports:
+      - 9000:9000
+      - 9092:9092
+  sonar-scanner:
+    image: sonarsource/sonar-scanner-cli:latest
+    container_name: sonar-scanner
+    environment:
+      SONAR_SERVER: http://sonar-server:9000/
+    volumes:
+      - ./:/usr/src
+    command: -Dproject.settings=sonar-project-client.properties -Dsonar.login=admin -Dsonar.password=123456
+    network_mode: host
+    restart: on-failure
+
