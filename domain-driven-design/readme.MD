@@ -42,3 +42,39 @@ published language
 separated ways
 big ball of mud
 https://github.com/ddd-crew/context-mapping
+
+Entities -> identidade
+Uma entidade e algo unico que e capaz de ser alterado de forma continua durante um longo periodo de tempo
+
+Uma entidade e algo que possui uma continuidade em seu clico de vida e pode ser distinguida independente dos atributos que sao
+importantes para aplicacao do usuario. pode se uma pessoa, cidade, ticket, carro, transacao
+
+Entidades anemicas -> 
+    entidades padroes criadas 
+    -> get set delas mesmos, ela nao tem comportamento, geralmente orientado a ORM
+
+Entidades ricas -> sao entidades baseadas nas regras de negocio, elas tem comportanto, validacoes
+                    uma entidade rica deve sempre representar o estado atual e correto
+
+Regras de negocios -> sao formas de mudar o comportamento de uma entidade rica
+
+Entidade VS ORM
+Entidade sao nossas regras, a "entidade do ORM" e o modelo de persistencia do banco de dados
+SEMPRE ENTIDADES SAO NOSSAS REGRAS E NAO DEVEM ESTAR ACOPLADAS AO FRAMEWORK
+
+Objetos de valor
+Quando voce se preocupa apenas com os atributos de um elemento de um model, classifique isso como um Value Object
+Trate o como imutavel
+Assim como as nossas entidades ricas, eles devem sempre se auto validar
+Nao possuem ID, pois nao usao unicos
+
+
+aggregate
+um agregado e um conjunto de objetos associados que tratamos como uma unidade para proposito de mudanca de dados
+
+
+domain services
+um servico de dominio e uma operacao sem estado que cumpre uma tarefa especifica do dominio.
+muitas vezes, a melhor indicacao de que voce deve criar um servico no modelo de dominio e quando a operacao
+que voce precisa executar parece nao se encaixar como um metodo em um agregado ou um objeto de valor
+domain services sao stateless
