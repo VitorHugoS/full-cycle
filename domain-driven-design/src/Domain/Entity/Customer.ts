@@ -6,6 +6,7 @@ export default class Customer {
     private _name: CustomerName;
     private _address!: Address;
     private _activate: boolean = false;
+    private _rewardPoints: number = 0;
 
     constructor(id: string, customerName: CustomerName) {
         this._id = id;
@@ -16,6 +17,10 @@ export default class Customer {
         if (this._id.length == 0) {
             throw new Error('Id is required');
         }
+    }
+
+    getId(): string {
+        return this._id;
     }
 
     getCustomerName(): CustomerName { 
@@ -43,5 +48,13 @@ export default class Customer {
 
     setAddress(address: Address): void {
         this._address = address;
+    }
+
+    addRewardPoints(points: number): void { 
+        this._rewardPoints += points;
+    };
+
+    getRewardPoints(): number { 
+        return this._rewardPoints;
     }
 }

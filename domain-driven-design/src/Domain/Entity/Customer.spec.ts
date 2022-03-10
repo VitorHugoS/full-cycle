@@ -43,6 +43,11 @@ describe("Customer Entity Unit Tests", () => {
             customer.deactivate();
             expect(customer.getStatusCustomer()).toBe(false);
         });
+
+        it("should add rewardPoints", () => { 
+            customer.addRewardPoints(100);
+            expect(customer.getRewardPoints()).toBe(100);
+        });
     });
 
 });
