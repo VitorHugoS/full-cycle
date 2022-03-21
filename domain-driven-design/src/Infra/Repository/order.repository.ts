@@ -1,11 +1,7 @@
-import Customer from "../../Domain/Entity/Customer";
 import Order from "../../Domain/Entity/Order";
 import OrderItem from "../../Domain/Entity/OrderItem";
 import Product from "../../Domain/Entity/Product";
-import Address from "../../Domain/Entity/VO/Address";
-import CustomerName from "../../Domain/Entity/VO/CustomerName";
 import OrderRepositoryInterface from "../../Domain/Repository/order-repository.interface";
-import CustomerModel from "../db/sequelize/model/customer.model";
 import OrderItemModel from "../db/sequelize/model/item.model";
 import OrderModel from "../db/sequelize/model/order.model";
 
