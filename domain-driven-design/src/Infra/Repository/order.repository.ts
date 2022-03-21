@@ -31,7 +31,7 @@ export default class OrderRepository implements OrderRepositoryInterface {
     async update(entity: Order): Promise<void> {
         await OrderModel.findOne({
             where: {
-                id: "1",
+                id: entity.id,
             },
             include: ["items"],
         }).then((order) => {
