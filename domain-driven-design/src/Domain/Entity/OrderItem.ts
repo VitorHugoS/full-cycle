@@ -2,10 +2,10 @@ import Product from "./Product";
 
 export default class OrderItem {
     
-    private _id: number;
+    private _id: string;
     private _product: Product;
 
-    constructor(id: number, product: Product) {
+    constructor(id: string, product: Product) {
         this._id = id;
         this._product = product;
         this.validate();
@@ -14,9 +14,17 @@ export default class OrderItem {
     getPriceOfProduct() { 
         return this._product.getPriceOfProduct();
     }
+
+    get product(): Product {
+        return this._product;
+    }
+
+    get id(): string {
+        return this._id;
+    }
     
     validate(): void {
-        if (this._id == 0) {
+        if (this._id.length === 0) {
             throw new Error('Id is required');
         }
         if (!this._product) {

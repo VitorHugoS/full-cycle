@@ -27,6 +27,10 @@ export default class Customer {
         return this._name;
     }
 
+    getAddress(): Address { 
+        return this._address;
+    }
+
     getStatusCustomer(): boolean { 
         return this._activate;
     }
