@@ -1,5 +1,11 @@
+import EventDispatcher from "../event/@shared/event-dispatcher";
 import Address from "./VO/Address";
 import CustomerName from "./VO/CustomerName";
+import SendLogWhenCustomerIsCreated from "../event/customer/handler/send-log-when-customer-is-created.handler";
+import SendLogWhenCustomerIsCreated2 from "../event/customer/handler/send-log-when-customer-is-created-2.handler";
+import SendLogWhenAddressFromCustomerIsChanged from "../event/customer/handler/send-log-when-address-from-customer-is-changed.handler";
+import CustomerCreatedEvent from "../event/customer/customer-created.event";
+import CustomerChangedAddressEvent from "../event/customer/customer-changed-address.event";
 
 export default class Customer {
     private _id: string;
@@ -12,6 +18,15 @@ export default class Customer {
         this._id = id;
         this._name = customerName;
         this.validate();
+
+        const eventDispatcher = new EventDispatcher();
+        const eventHandler = new SendLogWhenCustomerIsCreated();
+        const eventHandler2 = new SendLogWhenCustomerIsCreated2();
+        eventDispatcher.register("CustomerCreatedEvent", eventHandler);
+        eventDispatcher.register("CustomerCreatedEvent", eventHandler2);
+
+        const customerCreatedEvent = new CustomerCreatedEvent({});
+        eventDispatcher.notify(customerCreatedEvent);
     }
     validate(): void {
         if (this._id.length == 0) {
@@ -52,6 +67,15 @@ export default class Customer {
 
     setAddress(address: Address): void {
         this._address = address;
+        const eventDispatcher = new EventDispatcher();
+        const eventHandler = new SendLogWhenAddressFromCustomerIsChanged();
+        eventDispatcher.register("CustomerChangedAddressEvent", eventHandler);
+        const customerChangedAddress = new CustomerChangedAddressEvent({
+            id: this._id,
+            name: this._name._firstName,
+            address: this._address,
+        });
+        eventDispatcher.notify(customerChangedAddress);
     }
 
     addRewardPoints(points: number): void { 

@@ -1,3 +1,5 @@
+import SendLogWhenCustomerIsCreated2 from "../event/customer/handler/send-log-when-customer-is-created-2.handler";
+import SendLogWhenCustomerIsCreated from "../event/customer/handler/send-log-when-customer-is-created.handler";
 import Customer from "./Customer";
 import Address from "./VO/Address";
 import CustomerName from "./VO/CustomerName";

@@ -9,8 +9,8 @@ const productMock = [
 
 const totalProductMock = productMock.reduce((acc, product) => acc + product.getPriceOfProduct(), 0);
 const orderItemMock = [
-    new OrderItem(1, productMock[0]),
-    new OrderItem(2, productMock[1]),
+    new OrderItem("1", productMock[0]),
+    new OrderItem("2", productMock[1]),
 ];
 
 describe("Order Entity Unit Tests", () => { 

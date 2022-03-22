@@ -12,6 +12,6 @@ export default interface EventDispatcherInterface {
         eventName: string,
         eventHandler: EventHandlerInterface,
     ): void;
-    unRegister(): void;
-    
+    unregisterAll(): void;
+
 }
