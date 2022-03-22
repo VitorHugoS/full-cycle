@@ -1,16 +1,16 @@
 import { Sequelize } from 'sequelize-typescript';
-import Customer from '../../Domain/Entity/Customer';
-import CustomerName from '../../Domain/Entity/VO/CustomerName';
-import Address from '../../Domain/Entity/VO/Address';
+import Customer from '../../domain/entity/Customer';
+import CustomerName from '../../domain/entity/VO/CustomerName';
+import Address from '../../domain/entity/VO/Address';
 import CustomerModel from '../db/sequelize/model/customer.model';
 import CustomerRepository from './customer.repository';
 import OrderModel from '../db/sequelize/model/order.model';
 import OrderItemModel from '../db/sequelize/model/item.model';
 import ProductModel from '../db/sequelize/model/product.model';
 import ProductRepository from './product.repository';
-import Product from '../../Domain/Entity/Product';
-import OrderItem from '../../Domain/Entity/OrderItem';
-import Order from '../../Domain/Entity/Order';
+import Product from '../../domain/entity/Product';
+import OrderItem from '../../domain/entity/OrderItem';
+import Order from '../../domain/entity/Order';
 import OrderRepository from './order.repository';
 
 describe("Order Repository Unit Test", () => {

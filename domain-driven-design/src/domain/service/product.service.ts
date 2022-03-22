@@ -1,4 +1,4 @@
-import Product from "../Entity/Product";
+import Product from "../entity/Product";
 
 export default class ProductService {
     

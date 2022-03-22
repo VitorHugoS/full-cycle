@@ -1,8 +1,8 @@
-import Customer from "../Entity/Customer";
-import Order from "../Entity/Order";
-import OrderItem from "../Entity/OrderItem";
-import Product from "../Entity/Product";
-import CustomerName from "../Entity/VO/CustomerName";
+import Customer from "../entity/Customer";
+import Order from "../entity/Order";
+import OrderItem from "../entity/OrderItem";
+import Product from "../entity/Product";
+import CustomerName from "../entity/VO/CustomerName";
 import OrderService from "./order.service";
 
 describe("OrderService Unit Tests", () => {
@@ -15,9 +15,9 @@ describe("OrderService Unit Tests", () => {
         ];
 
         const listOfOrderItem = [
-            new OrderItem(1, listOfProducts[0]),
-            new OrderItem(2, listOfProducts[1]),
-            new OrderItem(3, listOfProducts[2]),
+            new OrderItem("1", listOfProducts[0]),
+            new OrderItem("2", listOfProducts[1]),
+            new OrderItem("3", listOfProducts[2]),
         ];
         const customer = new Customer("1", new CustomerName("John", "Doe"));
         const order = OrderService.placeOrder(customer, listOfOrderItem);
@@ -34,9 +34,9 @@ describe("OrderService Unit Tests", () => {
         ];
 
         const listOfOrderItem = [
-            new OrderItem(1, listOfProducts[0]),
-            new OrderItem(2, listOfProducts[1]),
-            new OrderItem(3, listOfProducts[2]),
+            new OrderItem("1", listOfProducts[0]),
+            new OrderItem("2", listOfProducts[1]),
+            new OrderItem("3", listOfProducts[2]),
         ];
 
         const listOfProductsSecondOrder = [
@@ -46,9 +46,9 @@ describe("OrderService Unit Tests", () => {
         ];
 
         const listOfOrderItemSecondOrder = [
-            new OrderItem(1, listOfProductsSecondOrder[0]),
-            new OrderItem(2, listOfProductsSecondOrder[1]),
-            new OrderItem(3, listOfProductsSecondOrder[2]),
+            new OrderItem("1", listOfProductsSecondOrder[0]),
+            new OrderItem("2", listOfProductsSecondOrder[1]),
+            new OrderItem("3", listOfProductsSecondOrder[2]),
         ];
 
         const listOfOrder = [

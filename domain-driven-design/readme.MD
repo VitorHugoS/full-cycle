@@ -78,3 +78,15 @@ um servico de dominio e uma operacao sem estado que cumpre uma tarefa especifica
 muitas vezes, a melhor indicacao de que voce deve criar um servico no modelo de dominio e quando a operacao
 que voce precisa executar parece nao se encaixar como um metodo em um agregado ou um objeto de valor
 domain services sao stateless
+
+
+domain events
+- event - datetime
+- handler: executa o processamento quando um evento e chamado
+- dispatcher: responsavel por armazenar e executar os handlers de um evento quando ele for disparado
+
+- criar um event dispatcher
+- criar um event
+- criar um handler para evento 
+- registrar o evento, juntamento com o handler no event dispatcher
+
