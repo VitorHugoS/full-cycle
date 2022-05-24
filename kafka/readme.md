@@ -86,4 +86,27 @@ producer: indepotencia
          pode duplicar mensagens
 
 consumer e consumer groups
+
+
+converters
+sink -> envia dados
+source -> pega dados
+transform -> transform dados antes de serem enviados para um conector sunk
+converter -> converte dados
+
+avro
+protobuffer
+json
+jsoschema
+
+
+dlq -> dead letter queue
+errors.tolerance
+   none: mata a task imediatamente
+   all: erros sao ignorados e a task continua normalmente
+   errors.deadletterqueue.topic.name = topic-name -> so pode ser usado no modo all
+      toda vez que der um erro, a mensagem sera jogada em um topico
+      o erro fica no header das mensagem
+
+
    
