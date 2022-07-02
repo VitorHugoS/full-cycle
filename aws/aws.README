@@ -1,0 +1,5 @@
+region -> regiao aonde estam agrupadas nossa avaiability zones 'AZ'
+   avaiability zone -> zonas de disponibilidade de data center AWS
+      local zone -> um data center menor ligado a uma avaiability zone, possuem recursos limitados
+      aws wavelength -> especifico para aplicacoes de baixa latencia
+      outspots -> datacenter q possuem hacks aws

@@ -1,0 +1,23 @@
+Clean architecture book
+
+Pagina 1
+
+Tem havido muita confusao sobre design e arquitetura ao longo dos anos.
+O que e design? O que e arquitetura? Qual a diferenca entre os dois?
+
+um dos objetivos deste livro e eliminar toda essa confusao e definir, de uma vez por todas, o que design e arquitetura sao.
+Para os iniciantes, vou afirmar que nao existe diferenca entre os 2. nenhuma mesmo
+
+a palavra arquitetura e usada muitas vezes no contexto de algo de alto nivel e e separada dos detalhes de nivel inferior, enquanto o design
+parece mais usado para definir estruturas e decisoes de um nivel inferior, mas essa esse uso nao faz sentido quando voce olha para o que um verdadeiro arquiteto faz
+
+considere que um arquiteto projetou minha nova casa. essa casa tem uma arquitetura? claro que tem. e que arquitetura e essa? bem, e a forma da casa, a aparencia do exterior, as elevacoes
+e o layout dos espacos e dos quartos, mas como eu olho atraves dos diagramas que meu arquiteto produziu, eu vejo o imenso numero de detalhes de baixo nivel. eu vejo aonde cada saida,
+interruptor de luz, e luz serao colocadas, eu vejo quais interrupetores controlam as luzes, eu vejo aonde a fornalha sera colocada, e o tamanho e o lugar do aquecedor de agua, e da bomba do poco.
+eu vejo descricoes detalhadas de como as paredes, telhados e fundacoes serao construidas.
+
+em resumo, eu vejo todos os pequenos detalhes que apoiam todas as decisoes de alto nivel como parte de todo o design da casa
+
+e assim e com o design de software, os detalhes de baixo nivel e as estruturas de alto nivel sao partes do mesmo todo. eles formam uma fabrica continua que define a forma do sistema.
+voce nao pode ter um sem o outro, de fato, nao existe nenhuma linha divisorias separando eles. ha simplesmente uma continuidade de decisoes de alto nivel ao mais baixo nivel
+
