@@ -2,6 +2,7 @@ import Customer from "../../../../domain/customer/entity/customer";
 import Address from "../../../../domain/customer/value-object/address";
 import CustomerRepositoryInterface from "../../../../domain/customer/repository/customer-repository.interface";
 import CustomerModel from "./customer.model";
+import { v4 as uuid } from "uuid";
 
 export default class CustomerRepository implements CustomerRepositoryInterface {
   async create(entity: Customer): Promise<void> {
@@ -62,7 +63,6 @@ export default class CustomerRepository implements CustomerRepositoryInterface {
 
   async findAll(): Promise<Customer[]> {
     const customerModels = await CustomerModel.findAll();
-
     const customers = customerModels.map((customerModels) => {
       let customer = new Customer(customerModels.id, customerModels.name);
       customer.addRewardPoints(customerModels.rewardPoints);

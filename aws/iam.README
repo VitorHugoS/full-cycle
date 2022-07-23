@@ -1,0 +1,15 @@
+IAM -> identity access management
+
+ARN -> amazon resource name
+IDCONTA:RECURSO
+
+groups
+   grupos permitem adicionar varios usuarios e compartilhar as mesmas policys no contexto
+   UM USUARIO PODE ESTAR ATE EM 10 GRUPOS
+
+policy sao os privilegios q aquele usuario ou grupo possui
+
+usuarios iam nao sao compartilhados em todas as regioes
+
+
+deny -> organization scps -> resource based policy -> iam permissions bondaries -> session policy -> identity based policy
