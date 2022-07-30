@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Should unit test Category" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-30T15:56:49" hostname="vitor" time="0.068">
+  <properties/>
+  <testcase name="Given a valid params when call new Category then instantiate a category" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.068"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
