@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Should unit test Category" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-01T22:33:07" hostname="vitor" time="0.04">
+<testsuite name="Should unit test Category" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-08-01T23:24:41" hostname="vitor" time="0.096">
   <properties/>
-  <testcase name="Given a Valid Category when call update to inactive then return category updated" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.04"/>
+  <testcase name="Given a Valid Category when call update then return category updated" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.048"/>
+  <testcase name="Given a Valid True isActive when call new Category Deactivate then return category inactive" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.008"/>
+  <testcase name="Given an invalid empty name when call new Category then should return error" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.011"/>
+  <testcase name="Given an invalid name length less than 3 when call new Category then should return error" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.004"/>
+  <testcase name="Given a valid params when call new Category then instantiate a category" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.003"/>
+  <testcase name="Given a Valid False isActive when call new Category Activate then return category activate" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.004"/>
+  <testcase name="Given an invalid null name when call new Category then should return error" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.002"/>
+  <testcase name="Given a Valid Category when call update to inactive then return category updated" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.002"/>
+  <testcase name="Given an invalid name greather than 255 when call new Category then should return error" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

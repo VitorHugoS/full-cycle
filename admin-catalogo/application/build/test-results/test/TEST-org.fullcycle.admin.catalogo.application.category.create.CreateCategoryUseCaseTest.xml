@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.fullcycle.admin.catalogo.application.category.create.CreateCategoryUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-01T23:46:50" hostname="vitor" time="0.607">
+  <properties/>
+  <testcase name="Given A Valid Command When Calls CreateCategory#execute should return categoryId" classname="org.fullcycle.admin.catalogo.application.category.create.CreateCategoryUseCaseTest" time="0.607"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
