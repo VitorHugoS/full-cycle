@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Should unit test Category" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-08-01T12:05:26" hostname="vitor" time="0.07">
+<testsuite name="Should unit test Category" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-08-01T16:50:53" hostname="vitor" time="0.061">
   <properties/>
-  <testcase name="Given a valid params when call new Category then instantiate a category" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.056"/>
-  <testcase name="Given an invalid null name when call new Category then should return error" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.007"/>
+  <testcase name="Given an invalid empty name when call new Category then should return error" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.043"/>
+  <testcase name="Given an invalid name length less than 3 when call new Category then should return error" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.003"/>
+  <testcase name="Given a valid params when call new Category then instantiate a category" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.003"/>
+  <testcase name="Given an invalid null name when call new Category then should return error" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.003"/>
+  <testcase name="Given an invalid name greather than 255 when call new Category then should return error" classname="org.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

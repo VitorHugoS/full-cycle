@@ -55,4 +55,76 @@ public class CategoryTest {
     Assertions.assertEquals(expectedErrorCount, actualException.getErrors().size());
     Assertions.assertEquals(expectedErrorMessage, actualException.getErrors().get(0).message());
   }
+
+  @Test
+  @DisplayName("Given an invalid empty name when call new Category then should return error")
+  public void givenAnInValidEmptyName_whenCallNewCategory_thenShouldReturnError() {
+    final var expectedName = "  ";
+    final var expectedDescription = "A categoria mais assistida";
+    final var expectedIsActive = true;
+
+    final var expectedErrorMessage = "'name' should be not null";
+    final var expectedErrorCount = 1;
+
+    final var actualCategory = Category.newCategory(
+        expectedName,
+        expectedDescription,
+        expectedIsActive
+    );
+    final var actualException = Assertions.assertThrows(
+        DomainException.class,
+        () -> actualCategory.validate(new ThrowsValidationHandler())
+    );
+
+    Assertions.assertEquals(expectedErrorCount, actualException.getErrors().size());
+    Assertions.assertEquals(expectedErrorMessage, actualException.getErrors().get(0).message());
+  }
+
+  @Test
+  @DisplayName("Given an invalid name length less than 3 when call new Category then should return error")
+  public void givenAnInValidNameLengthLessThan3_whenCallNewCategory_thenShouldReturnError() {
+    final var expectedName = "ab ";
+    final var expectedDescription = "A categoria mais assistida";
+    final var expectedIsActive = true;
+
+    final var expectedErrorMessage = "'name' must be between 3 and 255 characters";
+    final var expectedErrorCount = 1;
+
+    final var actualCategory = Category.newCategory(
+        expectedName,
+        expectedDescription,
+        expectedIsActive
+    );
+    final var actualException = Assertions.assertThrows(
+        DomainException.class,
+        () -> actualCategory.validate(new ThrowsValidationHandler())
+    );
+
+    Assertions.assertEquals(expectedErrorCount, actualException.getErrors().size());
+    Assertions.assertEquals(expectedErrorMessage, actualException.getErrors().get(0).message());
+  }
+
+  @Test
+  @DisplayName("Given an invalid name greather than 255 when call new Category then should return error")
+  public void givenAnInValidNameLengthGreatherThan255_whenCallNewCategory_thenShouldReturnError() {
+    final var expectedName = "ab".repeat(500);
+    final var expectedDescription = "A categoria mais assistida";
+    final var expectedIsActive = true;
+
+    final var expectedErrorMessage = "'name' must be between 3 and 255 characters";
+    final var expectedErrorCount = 1;
+
+    final var actualCategory = Category.newCategory(
+        expectedName,
+        expectedDescription,
+        expectedIsActive
+    );
+    final var actualException = Assertions.assertThrows(
+        DomainException.class,
+        () -> actualCategory.validate(new ThrowsValidationHandler())
+    );
+
+    Assertions.assertEquals(expectedErrorCount, actualException.getErrors().size());
+    Assertions.assertEquals(expectedErrorMessage, actualException.getErrors().get(0).message());
+  }
 }
