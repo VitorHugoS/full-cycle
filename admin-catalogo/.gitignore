@@ -1,2 +1,5 @@
 .idea
 .gradle
+/application/build/*
+/domain/build/*
+/infraestructure/build/*
