@@ -71,7 +71,7 @@ public class CreateCategoryUseCaseTest {
     final var aCommand =
         CreateCategoryCommand
             .with(
-                expectedName,
+                null,
                 expectedDescription,
                 expectedIsActive
             );
@@ -101,6 +101,9 @@ public class CreateCategoryUseCaseTest {
                 expectedDescription,
                 expectedIsActive
             );
+
+    Mockito.when(categoryGateway.create(any()))
+        .thenThrow(new IllegalStateException(expectedErrorMessage));
 
     final var notification =
         usecase.execute(aCommand).getLeft();
