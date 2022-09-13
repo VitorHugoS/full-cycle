@@ -20,8 +20,6 @@ public class Main {
     teste.push(20);
     teste.push(21);
 
-    teste.delete(11);
-
-    System.out.println(teste);
+    System.out.println(teste.reverseArrayToString());
   }
 }
