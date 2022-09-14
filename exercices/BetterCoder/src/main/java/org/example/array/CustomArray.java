@@ -39,6 +39,8 @@ public class CustomArray {
       growthAllocationMemory();
     }
     items[length] = item;
+    ArrayList teste = new ArrayList<>();;
+    teste.add()
     length++;
   }
 
