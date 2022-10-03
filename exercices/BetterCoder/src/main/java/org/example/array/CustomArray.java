@@ -2,6 +2,8 @@ package org.example.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class CustomArray {
 
@@ -39,7 +41,7 @@ public class CustomArray {
       growthAllocationMemory();
     }
     items[length] = item;
-    ArrayList teste = new ArrayList<>();;
+    Set teste = new HashSet();
     teste.add()
     length++;
   }
