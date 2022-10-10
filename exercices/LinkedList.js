@@ -2,21 +2,27 @@ class LinkedList {
    constructor(value) { 
       this.head = {
          value: value,
-         next: null
+         next: null,
+         prev: null
       }
       this.tail = this.head;
       this.length = 1;
    }
    append(value) { 
       const node = this.node(value);
+      node.prev = this.tail;
+      
       this.tail.next = node;
       this.tail = node;
       this.length++;
+      
       return this;
    }
    prepend(value) {
       const node = this.node(value);
+      
       node.next = this.head;
+      this.head.prev = node;
       this.head = node;
       this.length++;
       return this;
@@ -45,6 +51,7 @@ class LinkedList {
 
       const leader = this.traverseToIndex(findIndex);
       newNode.next = leader.next;
+      newNode.prev = leader;
       leader.next = newNode;
       this.length++;
       this.print();
@@ -62,6 +69,7 @@ class LinkedList {
       
       const leader = this.traverseToIndex(findIndex);
       const node = leader.next.next;
+      node.prev = leader;
       leader.next = node;
       this.length--;
       this.print();
@@ -78,7 +86,8 @@ class LinkedList {
    node(value) { 
       return {
          value: value,
-         next: null
+         next: null,
+         prev: null
       };
    }
 }
@@ -86,9 +95,9 @@ class LinkedList {
 const tail = new LinkedList(1).append(12).append(16).append(15).prepend(9);
 tail.print();
 tail.insert(0, 10);
-tail.delete(2);
+tail.delete(4);
 tail.print();
-
+console.log(tail.tail)
 
 
 
